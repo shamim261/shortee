@@ -5,6 +5,7 @@ import Hashloader from 'react-spinners/HashLoader';
 import { ToastContainer } from 'react-toastify';
 import { useAuth } from '../assets/contexts/AuthContext';
 import { copyClip, truncate } from '../utilities/util';
+import Button from './Button';
 export default function UrlList() {
     const { state } = useAuth();
     const navigate = useNavigate();
@@ -113,15 +114,16 @@ export default function UrlList() {
                     </tbody>
                 </table>
             ) : (
-                <div>
+                <div className="flex justify-center items-center flex-col">
                     <h1 className="text-lg text-center p-2">No URL Found!</h1>
 
-                    <Link
+                    {/* <Link
                         to="/"
                         className="w-1/4 md:w-1/5  md:py-3 flex justify-center px-4 py-2 bg-primary text-white hover:bg-hover transition-colors rounded-xl m-auto "
                     >
                         Create One
-                    </Link>
+                    </Link> */}
+                    <Button>Create One</Button>
                 </div>
             )}
         </div>

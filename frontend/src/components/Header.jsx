@@ -32,8 +32,8 @@ export default function Header() {
                     <img src={logoBlue} className="h-8 mr-3" alt="Shortee Logo" />
                 </a>
                 <div className="flex gap-2 items-center justify-center">
-                    <img src={user} className="md:hidden relative left-20 w-6 " alt="" />
-                    <span className="md:hidden relative left-4 text-gray-500 mr-3">{username}</span>
+                    <img src={user} className="md:hidden relative left-8 w-6 " alt="" />
+                    <span className="md:hidden relative left-0 text-gray-500 mr-3">{username}</span>
                 </div>
                 <button
                     onClick={toggleMobileMenu}

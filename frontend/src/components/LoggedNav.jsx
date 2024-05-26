@@ -100,7 +100,7 @@ export default function LoggedNav() {
                             </NavLink>
                         </li>
 
-                        <li className=" hidden md:block md:flex md:items-center">
+                        <li className=" hidden  md:flex md:items-center">
                             <img src={user} className="w-6 mr-1" alt="" />
                             <span className="disabled text-gray-500">{username}</span>
                             <img

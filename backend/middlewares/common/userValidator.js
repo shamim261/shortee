@@ -4,19 +4,20 @@ const createError = require("http-errors");
 const User = require("../../models/usersSchema");
 
 const userValidator = [
-  check("username")
+  check("name")
     .isAlpha("en-US", { ignore: " -" })
-    .withMessage("Name must not contain anything other than alphabet")
-    .custom(async (value) => {
-      try {
-        const user = await User.findOne({ username: value });
-        if (user) {
-          throw createError("Username already exist!");
-        }
-      } catch (err) {
-        throw createError(err.message);
+    .withMessage("Name must not contain anything other than alphabet"),
+  
+  check("username").custom(async (value) => {
+    try {
+      const user = await User.findOne({ username: value });
+      if (user) {
+        throw createError("Username already exist!");
       }
-    }),
+    } catch (err) {
+      throw createError(err.message);
+    }
+  }),
   check("email")
     .isEmail()
     .withMessage("Invalid Email Address!")
