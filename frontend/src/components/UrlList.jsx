@@ -16,7 +16,7 @@ export default function UrlList() {
     useEffect(() => {
         async function getData() {
             setSpinner(true);
-            const { data } = await axios.get(`/api/urls`, {
+            const { data } = await axios.get(`${import.meta.VITE_BACKEND_URL}/api/urls`, {
                 headers: {
                     authorization: `Bearer ${userInfo.token}`,
                 },
@@ -31,11 +31,14 @@ export default function UrlList() {
         const ask = confirm('Are you sure?');
 
         if (ask) {
-            const { data } = await axios.delete(`/api/urls/${shortID}`, {
-                headers: {
-                    authorization: `Bearer ${userInfo.token}`,
-                },
-            });
+            const { data } = await axios.delete(
+                `${import.meta.VITE_BACKEND_URL}/api/urls/${shortID}`,
+                {
+                    headers: {
+                        authorization: `Bearer ${userInfo.token}`,
+                    },
+                }
+            );
             window.location.reload();
         }
     }

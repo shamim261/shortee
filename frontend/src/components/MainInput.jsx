@@ -27,7 +27,7 @@ export default function MainInput() {
         }
         try {
             const { data } = await axios.post(
-                'api/urls',
+                `${import.meta.VITE_BACKEND_URL}/api/urls`,
                 {
                     url: updatedUrl,
                 },

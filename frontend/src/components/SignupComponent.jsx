@@ -22,7 +22,7 @@ export default function SignupComponent() {
         e.preventDefault();
 
         try {
-            const { data } = await axios.post(`/api/users/signup`, {
+            const { data } = await axios.post(`${import.meta.VITE_BACKEND_URL}/api/users/signup`, {
                 name: fullName,
                 username: username,
                 email: email,

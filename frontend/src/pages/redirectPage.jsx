@@ -11,7 +11,9 @@ export default function RedirectPage() {
             try {
                 console.log('Triggered');
 
-                const { data } = await axios.get(`/api/urls/r/${shortID}`);
+                const { data } = await axios.get(
+                    `${import.meta.VITE_BACKEND_URL}/api/urls/r/${shortID}`
+                );
 
                 if (data && data.mainURL) {
                     setError('');
