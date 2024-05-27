@@ -15,7 +15,7 @@ app.use(cookieParser(process.env.JWT_SECRET));
 // cors setup
 app.use(
   cors({
-    origin: "https://shortee-five.vercel.app",
+    origin: "https://shortee1.vercel.app",
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS",
   })
 );
