@@ -126,7 +126,7 @@ export default function UrlList() {
                     >
                         Create One
                     </Link> */}
-                    <Button>Create One</Button>
+                    <Button to="/">Create One</Button>
                 </div>
             )}
         </div>
