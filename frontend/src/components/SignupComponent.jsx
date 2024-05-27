@@ -22,12 +22,15 @@ export default function SignupComponent() {
         e.preventDefault();
 
         try {
-            const { data } = await axios.post(`${import.meta.VITE_BACKEND_URL}/api/users/signup`, {
-                name: fullName,
-                username: username,
-                email: email,
-                password: password,
-            });
+            const { data } = await axios.post(
+                `${import.meta.env.VITE_BACKEND_URL}/api/users/signup`,
+                {
+                    name: fullName,
+                    username: username,
+                    email: email,
+                    password: password,
+                }
+            );
             if (data.id) {
                 dispatch({ type: 'USER_SIGN_IN', payload: data });
                 localStorage.setItem('userInfo', JSON.stringify(data));

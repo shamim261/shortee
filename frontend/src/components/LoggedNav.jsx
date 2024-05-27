@@ -24,7 +24,7 @@ export default function LoggedNav() {
     }
     async function handleLogout() {
         try {
-            const { data } = await axios.delete(`/api/users`);
+            const { data } = await axios.delete(`${import.meta.env.VITE_BACKEND_URL}/api/users`);
             console.log(data);
 
             if (data.success) {

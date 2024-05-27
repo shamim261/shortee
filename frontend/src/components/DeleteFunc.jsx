@@ -11,7 +11,7 @@ export default function DeleteFunc() {
     useEffect(() => {
         async function HandleDelete() {
             const { data } = await axios.delete(
-                `${import.meta.VITE_BACKEND_URL}/api/urls/${shortID}`,
+                `${import.meta.env.VITE_BACKEND_URL}/api/urls/${shortID}`,
                 {
                     headers: {
                         authorization: `Bearer ${userInfo.token}`,

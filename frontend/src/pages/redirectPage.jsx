@@ -12,7 +12,7 @@ export default function RedirectPage() {
                 console.log('Triggered');
 
                 const { data } = await axios.get(
-                    `${import.meta.VITE_BACKEND_URL}/api/urls/r/${shortID}`
+                    `${import.meta.env.VITE_BACKEND_URL}/api/urls/r/${shortID}`
                 );
 
                 if (data && data.mainURL) {

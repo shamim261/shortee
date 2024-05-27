@@ -16,7 +16,7 @@ export default function UrlList() {
     useEffect(() => {
         async function getData() {
             setSpinner(true);
-            const { data } = await axios.get(`${import.meta.VITE_BACKEND_URL}/api/urls`, {
+            const { data } = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/urls`, {
                 headers: {
                     authorization: `Bearer ${userInfo.token}`,
                 },
@@ -32,7 +32,7 @@ export default function UrlList() {
 
         if (ask) {
             const { data } = await axios.delete(
-                `${import.meta.VITE_BACKEND_URL}/api/urls/${shortID}`,
+                `${import.meta.env.VITE_BACKEND_URL}/api/urls/${shortID}`,
                 {
                     headers: {
                         authorization: `Bearer ${userInfo.token}`,
