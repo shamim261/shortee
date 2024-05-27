@@ -6,7 +6,7 @@ export default defineConfig({
     plugins: [react()],
     server: {
         proxy: {
-            '/api': 'http://127.0.0.1:3100/', // the address that u serve in the backend
+            '/api': 'https://shortee-api.vercel.app/', // the address that u serve in the backend
         },
     },
 });
