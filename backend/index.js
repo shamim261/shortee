@@ -20,6 +20,9 @@ app.use(
   })
 );
 
+app.options('*', cors()); // Preflight all routes
+
+
 // mongodb connection
 mongoose
   .connect(process.env.MONGO_CONNECTION_STRING)
