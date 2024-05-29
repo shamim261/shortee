@@ -41,7 +41,7 @@ API Endpoints:
 - `POST /api/urls/:shortURL`: Delete a Shorten URL.
 - `GET /api/urls/r/:shortUrl`: Redirect to the original URL.
 
-  **Frontend (React)**
+**Frontend (React)**
   Navigate to the Frontend Directory:
 
 ```bash
