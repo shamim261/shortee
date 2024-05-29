@@ -16,7 +16,9 @@
    ```
 
 **Install Dependencies:**
+```bash
 npm install
+```
 
 **Environment Variables:** Create a .env file in the backend directory with the following variables:
 
@@ -39,7 +41,7 @@ API Endpoints:
 - `POST /api/urls/:shortURL`: Delete a Shorten URL.
 - `GET /api/urls/r/:shortUrl`: Redirect to the original URL.
 
-  **Frontend (React)**
+**Frontend (React)**
   Navigate to the Frontend Directory:
 
 ```bash
@@ -70,4 +72,3 @@ npm run dev
 **Deployment**
 For production deployment, consider using services like Heroku, Vercel, or AWS. Set up environment variables accordingly for the production environment.
 
-Feel free to enhance this README with additional details, instructions, and any other relevant information. Good luck with your Shortee project! 🚀 If you have any further questions, feel free to ask! 😊
