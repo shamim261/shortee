@@ -1,10 +1,14 @@
 export default function Footer() {
+    const date = new Date();
+
+    const year = date.getFullYear();
+
     return (
         <footer className="bg-white ">
             <div className="mx-auto w-full max-w-full">
                 <div className="px-4 py-6 bg-[#efefef] flex items-center justify-between">
                     <span className="text-sm text-gray-500  sm:text-center">
-                        © 2023 <a href="/">Shortee</a>. All Rights Reserved.
+                        © {year} <a href="/">Shortee</a>. All Rights Reserved.
                     </span>
                     <div className="flex  space-x-5 justify-center items-center i md:mt-0">
                         <a
