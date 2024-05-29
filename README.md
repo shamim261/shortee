@@ -70,4 +70,3 @@ npm run dev
 **Deployment**
 For production deployment, consider using services like Heroku, Vercel, or AWS. Set up environment variables accordingly for the production environment.
 
-Feel free to enhance this README with additional details, instructions, and any other relevant information. Good luck with your Shortee project! 🚀 If you have any further questions, feel free to ask! 😊
